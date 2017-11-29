@@ -40,6 +40,7 @@ class PeekPopManager {
         // Create PeekPopView
         let view = PeekPopView()
         peekPopView = view
+        peekPopView?.customHeight = context.customHeight
         
         // Take view controller screenshot
         if let viewControllerScreenshot = viewController.view.screenshotView() {

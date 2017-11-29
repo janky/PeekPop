@@ -20,6 +20,8 @@ class PeekPopView: UIView {
     var sourceToCenterYDelta: CGFloat = 0.0
     var sourceToTargetWidthDelta: CGFloat = 0.0
     var sourceToTargetHeightDelta: CGFloat = 0.0
+    
+    var customHeight:CGFloat?
 
     //MARK: Screenshots
     
@@ -93,7 +95,7 @@ class PeekPopView: UIView {
         sourceToCenterXDelta = self.bounds.size.width/2 - sourceViewCenter.x
         sourceToCenterYDelta = self.bounds.size.height/2 - sourceViewCenter.y
         sourceToTargetWidthDelta = self.bounds.size.width - targePreviewPadding.width - sourceViewRect.size.width
-        sourceToTargetHeightDelta = self.bounds.size.height - targePreviewPadding.height - sourceViewRect.size.height
+        sourceToTargetHeightDelta = customHeight ?? (self.bounds.size.height - targePreviewPadding.height - sourceViewRect.size.height)
 
     }
     

@@ -78,6 +78,8 @@ open class PreviewingContext {
     /// Source rect
     open var sourceRect: CGRect
     
+    open var customHeight: CGFloat?
+    
     init(delegate: PeekPopPreviewingDelegate, sourceView: UIView) {
         self.delegate = delegate
         self.sourceView = sourceView
