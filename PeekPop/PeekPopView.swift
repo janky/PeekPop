@@ -164,9 +164,9 @@ class PeekPopTargetPreviewView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        imageContainer.frame = self.bounds
+        imageContainer.frame = CGRect(x:self.bounds.origin.x,y:self.bounds.origin.y,width:self.bounds.size.width,height:330)
         imageView.frame = imageViewFrame
-        imageView.center = CGPoint(x: self.bounds.size.width/2, y: self.bounds.size.height/2)
+        //imageView.center = CGPoint(x: self.bounds.size.width/2, y: self.bounds.size.height/2)
     }
     
     func setup() {
